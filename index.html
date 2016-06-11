@@ -3,10 +3,23 @@
 <head>
     <title></title>
     <meta charset="utf-8" />
+    <!--Add google fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200' rel='stylesheet' type='text/css'>
+    <!--Add font awesome-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <!--Add my style-->
+    <link href="css/mystyle.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
     <!--Display first name and last name from MeVitae-->
-    <h1>{{summary.FirstName}} {{summary.LastName}}</h1>
+    <div class="content">
+        <h1>{{summary.FirstName}} {{summary.LastName}}</h1>
+        <p>{{summary.Description}}</p>
+        <div class="social-links"><a href="{{summary.Facebook}}"><i class="fa fa-facebook"></i></a></div>
+        <div class="social-links"><a href="{{summary.LinkedIn}}"><i class="fa fa-linkedin"></i></a></div>
+        <div class="social-links"><a href="{{summary.Twitter}}"><i class="fa fa-twitter"></i></a></div>
+    </div>
+
 
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" 
@@ -16,10 +29,7 @@
     <script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js'></script>
     <script src='https://cdn.rawgit.com/MeVitae/UnPack/v0.2/unlock-mevitae-javascript.js'></script>
     <script src='https://cdn.rawgit.com/MeVitae/UnPack/v0.2/UnPack.js'></script>
-    <script type='text/javascript'>
-        var PublicKey = "e2edb9bc-5fa1-4d8e-bebc-698713475ae0";
-        var data = getCV(PublicKey, 1);
-        AngularUnpackLoad(data);
-    </script>
+    <!--Add my script-->
+    <script src="js/myscript.js" type="text/javascript"></script>
 </body>
 </html>
